@@ -1,5 +1,6 @@
 @import "_normalize";
 @import "_variables";
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap&subset=latin-ext');
 
 
 html {
@@ -11,5 +12,37 @@ html {
 }
 
 body {
-  
+  color: $big-stone;
+  background: fff;
+  font-family: 'Poppins', sans-serif;
+  border: 16px solid $big-stone;
+}
+
+main {
+
+}
+
+.about {
+  &__title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 56px;
+  }
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  background-image: url(/assets/img/avatar-outer-border.svg);
+  position: relative;
+
+  &__image {
+    width: 100.21px;
+    height: 100.21px;
+    border-radius: 90px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }

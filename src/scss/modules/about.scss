@@ -1,0 +1,55 @@
+.about {
+  padding: 112px 0 200px;
+  max-width: 781px;
+
+  &__image {
+
+  }
+  
+  &__title {
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    margin: 2rem 0 1rem;
+  }
+
+  &__description {
+    color: $gray;
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+    margin-bottom: 3.75rem;
+  }
+
+  &__link {
+    color: $blue;
+    font-weight: 500;
+  }
+
+  &__mail {
+    color: $blue;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    text-decoration: none;
+    padding-bottom: 8px;
+    border-bottom: 2px solid $blue;
+  }
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  background-image: url(/assets/img/avatar-outer-border.svg);
+  position: relative;
+
+  &__image {
+    width: 100.21px;
+    height: 100.21px;
+    border-radius: 90px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

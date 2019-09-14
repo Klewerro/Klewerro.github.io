@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap&subset=latin-ext');
-@import "_normalize";
-@import "_variables";
-@import "modules/about";
+@import "_normalize.scss";
+@import "_variables.scss";
+@import "modules/about.scss";
+@import "modules/skills.scss";
 
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *:before, *:after {

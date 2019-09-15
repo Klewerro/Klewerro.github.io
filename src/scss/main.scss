@@ -3,6 +3,7 @@
 @import "_variables.scss";
 @import "modules/about.scss";
 @import "modules/skills.scss";
+@import "modules/projects.scss";
 
 
 html {
@@ -19,10 +20,5 @@ body {
   background: #fff;
   font-family: 'Poppins', sans-serif;
   border: 16px solid $big-stone;
-}
-
-main {
-  max-width: 1184px;
-  margin: 0 auto;
 }
 

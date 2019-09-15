@@ -1,8 +1,11 @@
 .about {
   padding: 112px 0 184px;
-  max-width: 781px;
+  
+  max-width: $max-width;
+  margin: 0 auto;
   
   &__title {
+    max-width: 781px;
     font-weight: 600;
     font-size: 2.5rem;
     line-height: 3.5rem;
@@ -10,6 +13,7 @@
   }
 
   &__description {
+    max-width: 781px;
     color: $gray;
     font-weight: 300;
     font-size: 1.25rem;

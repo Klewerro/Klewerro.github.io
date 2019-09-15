@@ -40,7 +40,8 @@
 .avatar {
   width: 120px;
   height: 120px;
-  background-image: url(/assets/img/avatar-outer-border.svg);
+  border: 6px solid #CBD2D9;
+  border-radius: 60px;
   position: relative;
 
   &__image {

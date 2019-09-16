@@ -13,10 +13,11 @@ fetch('https://api.github.com/users/klewerro/repos?sort=pushed&direction=desc')
 
 
 function repoToHtml(repo) {
-    const { description, name, homepage, html_url} = repo;
+    const { description, name, homepage, html_url, pushed_at } = repo;
 
     return ` 
     <article class="project">
+    <p class="project__updated">Updated: ${new Date(pushed_at).toLocaleDateString()}</p>
     <section class="project__content">
       <img class="project__image" src="assets/img/github.svg" />
       <h3 class="project__title">${name}</h3>

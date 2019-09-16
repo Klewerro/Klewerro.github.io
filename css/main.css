@@ -507,6 +507,9 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  @media (max-width: 768px) {
+    .project {
+      max-width: 100%; } }
   .project__content {
     padding: 48px; }
     @media (max-width: 768px) {

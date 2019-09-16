@@ -11,6 +11,9 @@
     padding: 1rem 0;
     border-bottom: 2px solid #E5E8EC;
     margin: 0;
+    @media (max-width: $resMobile) { 
+      text-align: center;
+    }
   }
 }
 
@@ -18,6 +21,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 8rem 0 0;
+  @media (max-width: $resMobile) {
+    grid-template-columns: 1fr;
+    padding: 5rem 0 0;
+  }
 
   &__title {
     margin: 0;
@@ -38,12 +45,15 @@
       .skills-list--blue & {
         background: $dark-blue;
       }
+      @media (max-width: $resMobile) {
+        width: 40px;
+      }
     }
   }
 
   &__list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     column-gap: 1.5rem;
     list-style-type: none;
     margin: calc(1.5rem + 4px);
@@ -56,6 +66,9 @@
     line-height: 2.5rem;
     padding-left: 30px;
     position: relative;
+    @media (max-width: $resMobile) {
+      padding-left: 20px;
+    }
     &::before {
       position: absolute;
       top: 12px;
@@ -64,12 +77,18 @@
       display: inline-block;
       width: 18px;
       height: 18px;
-      background: url('../assets/img/check-green.svg');
+      background-image: url('../assets/img/check-green.svg');
       .skills-list--violet & {
-        background: url('../assets/img/check-violet.svg');
+        background-image: url('../assets/img/check-violet.svg');
       }
       .skills-list--blue & {
-        background: url('../assets/img/check-blue.svg');
+        background-image: url('../assets/img/check-blue.svg');
+      }
+      @media (max-width: $resMobile) {
+        width: 12px;
+        height: 12px;
+        background-size: contain; 
+        top: 9px;
       }
     }
   }

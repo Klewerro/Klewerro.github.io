@@ -30,13 +30,16 @@
     row-gap: 24px;
     column-gap: 24px;
     // align-items: baseline;
+    @media (max-width: $resMobile) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
 .project {
   background: white;
   max-width: 580px;
-  min-width: 330px;
+  min-width: 280px;
   min-height: 300px;
   border-radius: 8px;
   box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
@@ -45,6 +48,9 @@
 
   &__content {
     padding: 48px;
+    @media (max-width: $resMobile) {
+      padding: 32px;
+    }
   }
 
   &__title {

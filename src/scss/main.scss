@@ -24,5 +24,8 @@ body {
   background: #fff;
   font-family: 'Poppins', sans-serif;
   border: 16px solid $big-stone;
+  @media (max-width: $resMobile) {
+    border: none;
+  }
 }
 

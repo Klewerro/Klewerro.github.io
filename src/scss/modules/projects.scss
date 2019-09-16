@@ -1,10 +1,9 @@
 .projects {
   background: $light-gray;
-  padding: 8rem 0;
+  padding: 8rem 0px;
 
   &__title {
     max-width: $max-width;
-    margin: 0 auto;
     font-weight: 600;
     font-size: 2.25rem;
     line-height: 3rem;
@@ -14,7 +13,7 @@
   &__wrapper {
     max-width: $max-width;
     margin: 0 auto;
-    //moze zawrappować także title?
+    padding: 0 16px;
   }
 
   &__description {
@@ -85,7 +84,7 @@
       position: relative;
       &::after {
         content: '';
-        height: 32px;
+        height: 2rem;
         width: 2px;
         background: #CBD2D9;
         display: block;

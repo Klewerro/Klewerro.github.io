@@ -2,8 +2,10 @@
   background: $big-stone;
   color: #FFF;
 
-  &__wrapper{
-    padding: 8rem 8rem calc(8rem - 16px) 8rem;
+  &__wrapper {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 8rem 16px calc(8rem - 16px);
   }
 
   &__title {

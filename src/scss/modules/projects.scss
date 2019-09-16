@@ -43,8 +43,13 @@
   min-height: 300px;
   border-radius: 8px;
   box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
-  position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (max-width: $resMobile) {
+    max-width: 100%;
+  }
 
   &__content {
     padding: 48px;
@@ -70,7 +75,6 @@
   &__footer {
     background: $light-gray;
     padding: 1rem 3rem;
-    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;

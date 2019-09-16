@@ -309,15 +309,21 @@ template {
   display: none; }
 
 .about {
-  padding: 112px 0 184px;
-  max-width: 1184px;
+  padding: calc(8rem - 16px) 16px 11.5rem;
+  max-width: 1216px;
   margin: 0 auto; }
+  @media (max-width: 768px) {
+    .about {
+      padding-top: 54px 16px 120px; } }
   .about__title {
     max-width: 781px;
     font-weight: 600;
     font-size: 2.5rem;
     line-height: 3.5rem;
     margin: 2rem 0 1rem; }
+    @media (max-width: 768px) {
+      .about__title {
+        margin: 16px 0 8px; } }
   .about__description {
     max-width: 781px;
     color: #52606D;
@@ -343,6 +349,11 @@ template {
   border: 6px solid #CBD2D9;
   border-radius: 60px;
   position: relative; }
+  @media (max-width: 768px) {
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border: 4px solid #CBD2D9; } }
   .avatar__image {
     width: 100.21px;
     height: 100.21px;
@@ -353,10 +364,15 @@ template {
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
+    @media (max-width: 768px) {
+      .avatar__image {
+        width: 66.81px;
+        height: 66.81px; } }
 
 .skills {
   padding-bottom: 8rem;
-  max-width: 1184px;
+  max-width: 1216px;
+  padding: 0 16px;
   margin: 0 auto; }
   .skills__title {
     font-weight: 600;
@@ -365,6 +381,9 @@ template {
     padding: 1rem 0;
     border-bottom: 2px solid #E5E8EC;
     margin: 0; }
+    @media (max-width: 768px) {
+      .skills__title {
+        text-align: center; } }
 
 .skills-list {
   display: -ms-grid;
@@ -372,6 +391,11 @@ template {
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   padding: 8rem 0 0; }
+  @media (max-width: 768px) {
+    .skills-list {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      padding: 5rem 0 0; } }
   .skills-list__title {
     margin: 0;
     font-weight: 600;
@@ -389,11 +413,13 @@ template {
         background: #653CAD; }
       .skills-list--blue .skills-list__title::before {
         background: #2251CC; }
+      @media (max-width: 768px) {
+        .skills-list__title::before {
+          width: 40px; } }
   .skills-list__list {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     -webkit-column-gap: 1.5rem;
        -moz-column-gap: 1.5rem;
             column-gap: 1.5rem;
@@ -406,6 +432,9 @@ template {
     line-height: 2.5rem;
     padding-left: 30px;
     position: relative; }
+    @media (max-width: 768px) {
+      .skills-list__item {
+        padding-left: 20px; } }
     .skills-list__item::before {
       position: absolute;
       top: 12px;
@@ -414,25 +443,31 @@ template {
       display: inline-block;
       width: 18px;
       height: 18px;
-      background: url("../assets/img/check-green.svg"); }
+      background-image: url("../assets/img/check-green.svg"); }
       .skills-list--violet .skills-list__item::before {
-        background: url("../assets/img/check-violet.svg"); }
+        background-image: url("../assets/img/check-violet.svg"); }
       .skills-list--blue .skills-list__item::before {
-        background: url("../assets/img/check-blue.svg"); }
+        background-image: url("../assets/img/check-blue.svg"); }
+      @media (max-width: 768px) {
+        .skills-list__item::before {
+          width: 12px;
+          height: 12px;
+          background-size: contain;
+          top: 9px; } }
 
 .projects {
   background: #F5F7FA;
-  padding: 8rem 0; }
+  padding: 8rem 0px; }
   .projects__title {
-    max-width: 1184px;
-    margin: 0 auto;
+    max-width: 1216px;
     font-weight: 600;
     font-size: 2.25rem;
     line-height: 3rem;
     padding: 1rem 0; }
   .projects__wrapper {
-    max-width: 1184px;
-    margin: 0 auto; }
+    max-width: 1216px;
+    margin: 0 auto;
+    padding: 0 16px; }
   .projects__description {
     color: #52606D;
     font-weight: 300;
@@ -448,19 +483,35 @@ template {
     -webkit-column-gap: 24px;
        -moz-column-gap: 24px;
             column-gap: 24px; }
+    @media (max-width: 768px) {
+      .projects__container {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr; } }
 
 .project {
   background: white;
   max-width: 580px;
-  min-width: 330px;
+  min-width: 280px;
   min-height: 300px;
   border-radius: 8px;
   -webkit-box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
           box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
-  position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   .project__content {
     padding: 48px; }
+    @media (max-width: 768px) {
+      .project__content {
+        padding: 32px; } }
   .project__title {
     font-weight: 600;
     font-size: 1.25rem;
@@ -473,7 +524,6 @@ template {
   .project__footer {
     background: #F5F7FA;
     padding: 1rem 3rem;
-    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -495,7 +545,7 @@ template {
       position: relative; }
       .project__link + .project__link::after {
         content: '';
-        height: 32px;
+        height: 2rem;
         width: 2px;
         background: #CBD2D9;
         display: block;
@@ -516,7 +566,9 @@ template {
   background: #171F3F;
   color: #FFF; }
   .contact__wrapper {
-    padding: 8rem 8rem calc(8rem - 16px) 8rem; }
+    max-width: 1216px;
+    margin: 0 auto;
+    padding: 8rem 16px calc(8rem - 16px); }
   .contact__title {
     font-weight: 600;
     font-size: 2rem;
@@ -562,6 +614,9 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth; }
+  @media (max-width: 768px) {
+    html {
+      font-size: 12px; } }
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
@@ -572,5 +627,8 @@ body {
   background: #fff;
   font-family: 'Poppins', sans-serif;
   border: 16px solid #171F3F; }
+  @media (max-width: 768px) {
+    body {
+      border: none; } }
 
 /*# sourceMappingURL=main.css.map */

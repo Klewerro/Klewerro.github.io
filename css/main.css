@@ -487,6 +487,9 @@ template {
       .projects__container {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr; } }
+  .projects__link {
+    color: #0593FB;
+    font-weight: 500; }
 
 .project {
   background: white;

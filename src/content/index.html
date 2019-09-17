@@ -6,7 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Szymon P Homepage</title>
-  <meta name="description" content="Description" />
+  <meta name="description" content="My personal website telling something about me as developer, containing my skills list and my personal projects fetching from GitHub API." />
+
+  <meta property="og:title" content="Szymon P Homepage" />
+  <meta property="og:description" content="My personal website telling something about me as developer, containing my skills list and my personal projects fetching from GitHub API." />
+  <meta property="og:url" content="https://klewerro.github.io" />
+  <!-- <meta property="og:image" content="https://klewerro.github.io/assets/img/cover.png" /> -->
 
   <link rel="stylesheet" href="css/main.css" />
 </head>
@@ -21,10 +26,10 @@
       </div>
       <h1 class="about__title">Hey there! 👋 My name is Szymon and I’m an aspiring Fullstack developer.</h1>
       <p class="about__description">You might be interested in checking the list of <a class="about__link"
-          href="#my-skills">my skills</a> Don’t forget to have a glimpse at <a class="about__link"
-          href="#my-projects">my projects</a> Currently I’m looking for a new challenges so if you have one - <a
+          href="#my-skills">my skills</a>. Don’t forget to have a glimpse at <a class="about__link"
+          href="#my-projects">my projects</a>. Currently I’m looking for a new challenges so if you have one - <a
           class="about__link" href="#contact-me">contact me</a> 😊</p>
-      <a class="about__mail" href="mailto:my@email.com">my@email.com</a>
+      <a class="about__mail" href="mailto:pol.szym95@gmail.com">pol.szym95@gmail.com</a>
     </section>
 
     <section id="my-skills" class="skills">
@@ -32,39 +37,43 @@
       <section class="skills-list">
         <h3 class="skills-list__title">Working knowledge</h3>
         <ul class="skills-list__list">
+          <li class="skills-list__item">C# 7.0</li>
+          <li class="skills-list__item">Java 7</li>
+          <li class="skills-list__item">Javascript</li>
+          <li class="skills-list__item">Xamarin.Froms 4</li>
+          <li class="skills-list__item">Prism.Forms</li>
+          <li class="skills-list__item">ASP.NET (Core) WEB API</li>
+          <li class="skills-list__item">Git</li>
           <li class="skills-list__item">Semantic HTML5</li>
-          <li class="skills-list__item">Flexbox</li>
-          <li class="skills-list__item">Markdown</li>
-          <li class="skills-list__item">JS: Local storage</li>
-          <li class="skills-list__item">Figma</li>
-          <li class="skills-list__item">CSS grid</li>
-          <li class="skills-list__item">Forms</li>
-          <li class="skills-list__item">JS: DOM manipulations</li>
-          <li class="skills-list__item">SASS</li>
+          <li class="skills-list__item">CSS & SASS</li>
+          <li class="skills-list__item">Unit testing (NUnit)</li>
+          <li class="skills-list__item">Relational databases</li>
         </ul>
       </section>
       <section class="skills-list skills-list--violet">
         <h3 class="skills-list__title">Know something about</h3>
         <ul class="skills-list__list">
-          <li class="skills-list__item">JavaScript ES6+ features</li>
-          <li class="skills-list__item">CSS animations</li>
-          <li class="skills-list__item">Working with API
-          <li class="skills-list__item">NPM Scripts</li>
-          <li class="skills-list__item">Progressive web apps</li>
-          <li class="skills-list__item">Git</li>
-          <li class="skills-list__item">Accessibility</li>
+          <li class="skills-list__item">Android</li>
+          <li class="skills-list__item">Xamarin.Android</li>
+          <li class="skills-list__item">Angular JS</li>
+          <li class="skills-list__item">Web Accessibility</li>
+          <li class="skills-list__item">ASP.NET MVC</li>
+          <li class="skills-list__item">WinForms</li>
+          <li class="skills-list__item">JavaFX</li>
+          <li class="skills-list__item">PWA</li>
+          <li class="skills-list__item">Releasing app in App Store and Play Store</li>
         </ul>
       </section>
       <section class="skills-list skills-list--blue">
         <h3 class="skills-list__title">Want to learn</h3>
         <ul class="skills-list__list">
-          <li class="skills-list__item">React JS</li>
-          <li class="skills-list__item">Node.JS</li>
-          <li class="skills-list__item">Electron</li>
-          <li class="skills-list__item">Server side rendering</li>
+          <li class="skills-list__item">MvvmCross</li>
+          <li class="skills-list__item">Angular 8</li>
           <li class="skills-list__item">Typescript</li>
-          <li class="skills-list__item">Gatsby</li>
-          <li class="skills-list__item">Websockets</li>
+          <li class="skills-list__item">Graph Databases</li>
+          <li class="skills-list__item">Javascript ES6+</li>
+          <li class="skills-list__item">Flutter</li>
+          <li class="skills-list__item">WPF/UWP</li>
         </ul>
       </section>
     </section>
@@ -73,8 +82,8 @@
 
       <div class="projects__wrapper">
         <h2 class="projects__title">Recent projects</h2>
-        <p class="projects__description">I started my developer path in 2014. Since then, I’ve built some projects.
-          Here’s the list of the things I’ve done so far.</p>
+        <p class="projects__description">I started my developer path in 2014. Since then, I’ve built some <a class="projects__link" target="_blank" rel="nofollow noreferrer" href="https://github.com/Klewerro?tab=repositories" title="">projects</a>.
+          Here’s the list of my 6 recently modified repositories.</p>
         <div class="projects__container projects__container--js">
         </div>
       </div>
@@ -84,14 +93,14 @@
       <div class="contact__wrapper">
         <h2 class="contact__title">Contact me</h2>
         <p class="contact__description">I’m open for new opportunities. If you have one for me we should talk!</p>
-        <ul class="social">
+        <ul class="social" style="display: none;">
           <li class="social__item">
             <a class="social__link" href="#">
               <img class="social__icon" src="assets/img/facebook.svg" alt="facebook" />
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a class="social__link" target="_blank" rel="nofollow noreferrer" href="https://github.com/Klewerro">
               <img class="social__icon" src="assets/img/github-light.svg" alt="github" />
             </a>
           </li>
@@ -101,7 +110,7 @@
             </a>
           </li>
         </ul>
-        <a class="contact__mail" href="mailto:my@email.com">my@email.com</a>
+        <a class="contact__mail" href="mailto:pol.szym95@gmail.com">pol.szym95@gmail.com</a>
       </div>
     </footer>
 

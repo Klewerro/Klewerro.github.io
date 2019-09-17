@@ -34,6 +34,11 @@
       grid-template-columns: 1fr;
     }
   }
+
+  &__link {
+    color: $blue;
+    font-weight: 500;
+  }
 }
 
 .project {

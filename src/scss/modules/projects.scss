@@ -55,13 +55,14 @@
   &__updated {
     font-weight: 300;
     font-size: 1.125rem;
-    padding-right: 48px;
+    margin-right: 48px;
     margin-bottom: 0;
     position: absolute;
     top: 0;
     right: 0;
+    cursor: help;
     @media (max-width: $resMobile) {
-      padding-right: 32px;
+      margin-right: 32px;
     }
   }
 

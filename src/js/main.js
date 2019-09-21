@@ -21,23 +21,35 @@ function rotateWords() {
 
     currentWord.classList.remove('change_words__word--active');
     nextWord.classList.add('change_words__word--active');
-    setTimeout(() => rotateWords(), 5000);
+    setTimeout(() => rotateWords(), 3000);
 }
-
 
 function downloadRepos() {
     fetch('https://api.github.com/users/klewerro/repos?sort=pushed&direction=desc')
     .then(response => response.json())
     .then(json => {
         const repos = json;
+        return repos.slice(0, 6);
+    })
+    .then(repos => {
+        let commitMessages = [];
+        for (let i = 0; i < repos.length; i++) {
+            const { name } = repos[i];
 
-        for (const repo of repos.slice(0, 6)) {
-            const { name, pushed_at } = repo;
-            let lastCommitMessage;
             fetch(`https://api.github.com/repos/klewerro/${name}/commits`)
                 .then(response => response.json())
-                .then(json => lastCommitMessage = json[0].commit.message)
-                .then(() =>  projectsContainer.innerHTML += repoToHtml(repo, lastCommitMessage));
+                .then(json => {
+                    const lastCommitMessage = json[0].commit.message;
+                    commitMessages[i] = {name, lastCommitMessage};
+                })
+        }
+
+        return {repos, commitMessages};
+    })
+    .then(result => {
+        const {repos, commitMessages} = result;
+        for (let i = 0; i < result.repos.length; i++) {
+            projectsContainer.innerHTML += repoToHtml(repos[i], commitMessages[i]);
         }
 
         checkNumberOfRemainingRequests();
@@ -47,7 +59,6 @@ function downloadRepos() {
         checkNumberOfRemainingRequests();
     });
 }
-
 
 function repoToHtml(repo, lastCommitMessage) {
     const { description, name, homepage, html_url, pushed_at } = repo;

@@ -1,3 +1,18 @@
+@keyframes hand-wave-animation {
+  0% { transform: rotate(  0.0deg) }
+ 10% { transform: rotate(-10.0deg) }
+ 20% { transform: rotate( 12.0deg) }
+ 30% { transform: rotate(-10.0deg) }
+ 40% { transform: rotate(  9.0deg) }
+ 50% { transform: rotate(  0.0deg) }
+100% { transform: rotate(  0.0deg) }
+}
+
+@keyframes newWord {
+  0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
 .about {
   padding: calc(8rem - 16px) 16px 11.5rem;
   max-width: $max-width;
@@ -29,6 +44,7 @@
   &__link {
     color: $blue;
     font-weight: 500;
+    @include link-hover-animation();
   }
 
   &__mail {
@@ -39,6 +55,19 @@
     text-decoration: none;
     padding-bottom: 8px;
     border-bottom: 2px solid $blue;
+    @include link-hover-animation();
+  }
+
+  &__hand {
+    animation-name: hand-wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: 2;
+    transform-origin: 70% 70%;
+    display: inline-block;
+    &:hover {
+      cursor: no-drop;
+      animation: none;
+    }
   }
 }
 
@@ -53,6 +82,10 @@
     height: 80px;
     border: 4px solid #CBD2D9;
   }
+  transition: border $short-animation ease-in-out;
+  &:hover {
+    border: 15px solid #CBD2D9;
+  }
 
   &__image {
     width: 100.21px;
@@ -65,6 +98,19 @@
     @media (max-width: $resMobile) {
       width: 66.81px;
       height: 66.81px;
+    }
+  }
+}
+
+
+.change_words {
+
+  &__word {
+    display: none;
+
+    &--active {
+      display: inline;
+      animation: newWord .5s linear forwards;
     }
   }
 }

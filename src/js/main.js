@@ -2,7 +2,31 @@
 
 const projectsContainer = document.querySelector('.projects__container--js');
 
-fetch('https://api.github.com/users/klewerro/repos?sort=pushed&direction=desc')
+downloadRepos();
+rotateWords()
+
+
+function rotateWords() {
+    const parentSpan = document.querySelector('.change_words--js');
+    const allWords = parentSpan.children;
+    let currentWord, nextWord;
+
+    for (let i = 0; i < allWords.length; i++) {
+        if (allWords[i].classList.contains('change_words__word--active')) {
+            currentWord = allWords[i]
+            nextWord = i == allWords.length - 1 ? allWords[0] : allWords[i+1];
+            break;
+        }
+    }
+
+    currentWord.classList.remove('change_words__word--active');
+    nextWord.classList.add('change_words__word--active');
+    setTimeout(() => rotateWords(), 5000);
+}
+
+
+function downloadRepos() {
+    fetch('https://api.github.com/users/klewerro/repos?sort=pushed&direction=desc')
     .then(response => response.json())
     .then(json => {
         const repos = json;
@@ -22,6 +46,7 @@ fetch('https://api.github.com/users/klewerro/repos?sort=pushed&direction=desc')
         console.log(err);
         checkNumberOfRemainingRequests();
     });
+}
 
 
 function repoToHtml(repo, lastCommitMessage) {

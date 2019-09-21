@@ -1,5 +1,20 @@
+@mixin link-hover-animation {
+    transition: background-color $short-animation ease-in-out, 
+        color $short-animation ease-in-out, 
+        border-radius $short-animation ease-in-out,
+        padding $short-animation ease-in-out;
+  
+    &:hover {
+      background-color: $blue;
+      color: white;
+      border-radius: 2px;
+      padding: 4px;
+    }
+  }
+
 $max-width: 1216px;
 $resMobile: 768px;
+
 $big-stone: #171F3F;
 $gray: #52606D; 
 $light-gray: #F5F7FA; 
@@ -7,3 +22,5 @@ $blue: #0593FB;
 $dark-blue: #2251CC;
 $green: #06C847;
 $violet: #653CAD;
+
+$short-animation: .2s;

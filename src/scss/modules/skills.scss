@@ -25,6 +25,15 @@
     grid-template-columns: 1fr;
     padding: 5rem 0 0;
   }
+  
+  &:hover {
+    .skills-list__title::before {
+      width: 120px;
+      @media (max-width: $resMobile) {
+        width: 80px;
+      }
+    }
+  }
 
   &__title {
     margin: 0;
@@ -45,6 +54,7 @@
       .skills-list--blue & {
         background: $dark-blue;
       }
+      transition: width $short-animation ease-in-out;
       @media (max-width: $resMobile) {
         width: 40px;
       }
@@ -84,12 +94,16 @@
       .skills-list--blue & {
         background-image: url('../assets/img/check-blue.svg');
       }
+      transition: transform $short-animation ease-in-out;
       @media (max-width: $resMobile) {
         width: 12px;
         height: 12px;
         background-size: contain; 
         top: 9px;
       }
+    }
+    &:hover::before {
+      transform: scale(1.5);
     }
   }
 }

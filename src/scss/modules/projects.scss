@@ -38,6 +38,7 @@
   &__link {
     color: $blue;
     font-weight: 500;
+    @include link-hover-animation();
   }
 }
 
@@ -53,8 +54,12 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  transition: box-shadow $short-animation ease-in-out;
   @media (max-width: $resMobile) {
     max-width: 100%;
+  }
+  &:hover {
+    box-shadow: 0px 12px 32px rgba(24, 41, 67, 0.16);
   }
 
   &__updated {

@@ -575,7 +575,7 @@ template {
 
 .projects {
   background: #F5F7FA;
-  padding: 8rem 0px; }
+  padding: 8rem 0px 4.5rem; }
   .projects__title {
     max-width: 1216px;
     font-weight: 600;
@@ -781,6 +781,37 @@ template {
     color: white;
     border-radius: 2px;
     padding: 4px; }
+
+.diagrams {
+  max-width: 1216px;
+  margin: 0 auto;
+  padding: 8rem 1rem 11rem; }
+  .diagrams__title {
+    max-width: 1216px;
+    font-weight: 600;
+    font-size: 2.25rem;
+    line-height: 3rem;
+    padding: 1rem 0; }
+  .diagrams__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .diagrams__diagram {
+    width: 75%;
+    height: auto; }
+    @media (max-width: 1000px) {
+      .diagrams__diagram {
+        width: 90%; } }
+    @media (max-width: 768px) {
+      .diagrams__diagram {
+        width: 100%; } }
 
 html {
   -webkit-box-sizing: border-box;
